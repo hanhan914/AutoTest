@@ -8,8 +8,9 @@
     <artifactId>jiekou</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!--testNG-->
+
     <dependencies>
+        <!--testNG-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
