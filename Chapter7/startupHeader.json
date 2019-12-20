@@ -1,0 +1,22 @@
+[
+  {
+    "description":"这是一个post的header请求",
+    "request":{
+      "uri":"/post/headers",
+      "method":"post",
+      "headers":{
+        "Content-type":"application/json"
+      },
+      "json":{
+        "name":"niu",
+        "sex":"man"
+      }
+    },
+    "response":{
+      "json":{
+        "niu":"success",
+        "status":"1"
+      }
+    }
+  }
+]
