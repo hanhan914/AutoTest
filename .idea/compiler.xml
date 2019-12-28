@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Chapter10" />
         <module name="Chapter9" />
         <module name="di6" />
         <module name="jiekou" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Chapter10" target="1.8" />
       <module name="Chapter9" target="1.5" />
       <module name="di6" target="6" />
       <module name="jiekou" target="1.5" />
