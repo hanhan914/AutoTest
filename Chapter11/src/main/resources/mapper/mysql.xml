@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.apache.org/dtd/mybatis-3-mapper.dtd">
+
+<!--mapper.xml作用：配置inser  update  delete标签
+    1、namespace要和代理接口UserDao包路径保持一致
+    2、增删改id值要和user 方法名称保持一致
+    3、增删除改标签的 parameterType和UserDao的形参类型要保持一致
+-->
+<mapper namespace="com.course.model">
+    <!--查询select语句-->
+    <select id="getUserCount"  resultType="Integer">
+        SELECT count(*) from user;
+    </select>
+
+    <!--插入insert语句-->
+    <insert id="addUser" parameterType="com.course.model.User">
+        insert into user(id,name,age,sex)
+        values(#{id},#{name},#{age},#{sex});
+    </insert>
+    <!--更新数据-->
+    <update id="updateUser" parameterType="com.course.model.User">
+        update user set name=#{name},age=#{age}
+        where id=#{id};
+    </update>
+    <!--删除数据-->
+    <delete id="deleteUser" parameterType="Integer">
+        delete from user where id=#{id};
+    </delete>
+</mapper>
